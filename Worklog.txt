@@ -1,0 +1,13 @@
+Devlog:
+- Devlog allows any group member to see the project's current state at any time.
+- The project manager will ensure the devlog is being maintained but will not make all
+entries.
+- The devlog should be a plain text file stored in the specified location (see below).
+- When any team member stops working and pushes changes to GitHub, they should
+update the devlog, explaining what changes have been made. Include errors/bugs
+discovered (or created).
+- Separate devlog entries with a newline.
+- The most recent entry should be at the bottom.
+- Each entry should begin with the following format: FirstL -- TIMESTAMP\n ( e.g.,
+JessicaN -- 2024-01-04 22:15 )
+
