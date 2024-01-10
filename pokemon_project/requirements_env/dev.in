@@ -1,7 +1,0 @@
--c main.txt
-
-nodeenv
-pgadmin4
-pygraphviz
-django-extensions
-jupyter
