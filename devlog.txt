@@ -14,4 +14,7 @@ The view for getting pokemon may require a filtered results list when entering p
 CalvinP -- 2024-01-11 18:40
 Started the html for pokedex, making tables for pokemon name, stats etc. Waiting for models and inserting data to be done to test
 
+MarcusN -- 2024-01-12 14:39
+Created home app with homepage, created navbar with links to other apps. Starting work on CSS
+
 (new entry here)
