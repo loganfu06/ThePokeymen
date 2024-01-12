@@ -3,6 +3,7 @@ from django.db import models
 # Create your models here.
 class Type(models.Model):
     name = models.CharField(max_length=50)
+    damage_relations = models.JSONField(default=list)
 
 class Pokemon(models.Model):
     name = models.CharField(max_length=25)

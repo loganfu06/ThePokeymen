@@ -3,10 +3,28 @@
 {% block content %}
 <p>Lmao</p>
 <table>
-    <tr>Name </tr>
-    <tr>HP</tr>
+    <tr>
+    <th>Name</th>
+    <th>IMG</th>
+    <th>TYPE</th>
+    {% comment %} <th>HP</th>
+    <th>ATK</th>
+    <th>DEF</th>
+    <th>SP_ATK</th>
+    <th>SP_DEF</th>
+    <th>SPD</th> {% endcomment %}
+    </tr>
 {% for pokemon in object_list %}
-
+    <tr>
+    <td>{{pokemon.name}}</td>
+    <td><img src="{{pokemon.image}}"></td>
+    <td>{{pokemon.type.name}}</td>
+    {% comment %} <td>{{pokemon.hp}}</td>
+    <td>{{pokemon.attack}}</td>
+    <td>{{pokemon.defense}}</td>
+    <td>{{pokemon.special_attack}}</td>
+    <td>{{pokemon.attack}}</td>
+    <td>{{pokemon.speed}}</td> {% endcomment %}
 {% endfor %}
 </table>
 {% endblock content %}
