@@ -4,4 +4,8 @@ Worked on design document yesterday and today; submitted for review.
 LoganF -- 2024-01-10 16:53
 Made the models for pokedex, made a basic list view and empty template, and configured some basic settings.
 
+LoganF -- 2024-01-11 22:00
+Finished critical views for retrieving pokemon data from api and storing into database, and a view to load all pokemon type data into database.
+The view for getting pokemon may require a filtered results list when entering pokemon to add because the api endpoint is specific.
+
 (new entry here)
