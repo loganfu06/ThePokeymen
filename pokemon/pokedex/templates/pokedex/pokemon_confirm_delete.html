@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form method="post">{% csrf_token %}
+    <p>Are you sure you want to delete the Pokemon "{{ object.name|title }}"?</p>
+    {{ form.as_p }}
+    <input type="submit" value="Confirm">
+    <a href="{% url 'pokedex:pokemon_detail' object.id %}">Go back</a><br/>
+</form>
+{% endblock content %}
