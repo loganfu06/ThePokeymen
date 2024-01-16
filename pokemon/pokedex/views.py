@@ -15,6 +15,21 @@ import requests
 # Create your views here.
 class PokemonListView(ListView):
     model = Pokemon
+
+class PokemonDetailView(DetailView):
+    model = Pokemon
+    
+class PokemonDeleteView(DeleteView):
+    model = Pokemon
+    success_url = reverse_lazy("pokedex:pokemon_list")
+    
+    def form_valid(self, form):
+        response = super().form_valid(form)
+        messages.add_message(
+            self.request, messages.SUCCESS,
+            'Pokemon "{pokemon_name}" has been deleted'.format(
+                pokemon_name=self.object.name.capitalize()))
+        return response
     
 def createPokemon(request, pokemon_name):
     api_url = 'https://pokeapi.co/api/v2/pokemon/{fname}'.format(fname = pokemon_name)
