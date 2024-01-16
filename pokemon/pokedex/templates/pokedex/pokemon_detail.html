@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<a href="{% url 'pokedex:pokemon_list' %}">Go back to Pokemon list</a><br/><br/>
+<p>Lmao this is a detail view</p>
+<p>Their name is {{object.name}} </p>
+<a href="{% url 'pokedex:pokemon_delete' object.id %}">Delete Pokemon</a><br/>
+
+<table>
+    <tr>
+    <th>Name</th>
+    <th>IMG</th>
+    <th>TYPE</th>
+    <th>HP</th>
+    <th>ATK</th>
+    <th>DEF</th>
+    <th>SP_ATK</th>
+    <th>SP_DEF</th>
+    <th>SPD</th> 
+    </tr>
+    <tr>
+    <td>{{object.name}}</td>
+    <td><img src="{{object.image}}"></td>
+    <td>{{object.type.name}}</td>
+    <td>{{object.hp}}</td>
+    <td>{{object.attack}}</td>
+    <td>{{object.defense}}</td>
+    <td>{{object.special_attack}}</td>
+    <td>{{object.attack}}</td>
+    <td>{{object.speed}}</td> 
+</table>
+{% endblock content %}
