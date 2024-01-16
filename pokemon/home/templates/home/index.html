@@ -2,25 +2,30 @@
 {% load static %}
 {% block content %}
    <!DOCTYPE html>
-   <html lang="en">
+   <html lang="en"></html>
    <meta charset="UTF-8">
    <title>Page Title</title>
-   <meta name="viewport" content="width=device-width,initial-scale=1">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
    <link rel="stylesheet" href="{% static 'main.css'%}">
-   <div class="title"><h1>Welcome to {{title_page}}</h1></div><br><br>
+   <!-- Latest compiled and minified CSS -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+   <div class="title container my-5 p-1 bg-primary"><h1>Welcome to {{title_page}}</h1></div><br><br>
 
-   <div class="explainer">
+   <div class="explainer container">
       <h3>Home</h3>
       <p>
          The landing page for our website. Contains links to other
          apps and a brief overview of them.
       </p>
    </div><br>
-   <div class="explainer">
+   <div class="explainer container ">
       <h3>Pokedex</h3>
       <p>
          The main page of our website. Here you can interact with the
          database and create, edit, or view pokemon and their data.
       </p>
    </div>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 {% endblock content %}``
