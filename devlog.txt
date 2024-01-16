@@ -20,4 +20,6 @@ Created home app with homepage, created navbar with links to other apps. Startin
 LoganF -- 2024-01-12 14:43
 Created detail and delete views for Pokemon model. Python/backend functionality works, need to work on templates
 
+LoganF -- 2024-01-16 14:47
+Updated README with information for deliverable Wednesday. 
 (start new entry here)
