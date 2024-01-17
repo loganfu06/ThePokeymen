@@ -35,8 +35,12 @@ Made a view to load initial data into database. Need to add functionality for in
 CalvinP -- 2024-01-16 21:11
 Finished pokemon detail html with all of the stats provided by the api and merged branch with main. 
 
-MarcusN -- 2024-1-17 20:47
+MarcusN -- 2024-1-17 14:47
 Added bootstrap and css style to list and detail, added logo to navbar
+
+LoganF -- 2024-1-17 18:33
+Touched up/fixed templates a bit, made a model to store all pokemon names the user can retrieve from the API and loaded those names as options in a html select.
+Javascript is necessary to filter the options using a search.
 
 (start new entry here)
 
