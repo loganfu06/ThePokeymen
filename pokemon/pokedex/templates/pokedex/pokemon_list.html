@@ -2,8 +2,10 @@
 
 {% block content %}
 <br>
-<table>
-    <tr>
+<div class="row justify-content-center">
+    <div class="col-auto">
+<table class="table table-bordered">
+    <tr class="table-primary">
     <th>Name</th>
     <th>Image</th>
     {% comment %} <th>HP</th>
@@ -14,7 +16,7 @@
     <th>SPD</th> {% endcomment %}
     </tr>
 {% for pokemon in object_list %}
-    <tr>
+    <tr> 
     <td><a href="{% url 'pokedex:pokemon_detail' pokemon.id %}">{{pokemon.name|title }}</a></td>
     <td><img src="{{pokemon.image}}"></td>
     </tr>
@@ -26,6 +28,8 @@
     <td>{{pokemon.speed}}</td> {% endcomment %}
 {% endfor %}
 </table>
+</div>
+</div>
 {% endblock content %}
 
 {% comment %} class Pokemon(models.Model):
