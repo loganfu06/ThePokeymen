@@ -1,12 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
-<p>Lmao</p>
+<br>
 <table>
     <tr>
     <th>Name</th>
-    <th>IMG</th>
-    <th>TYPE</th>
+    <th>Image</th>
     {% comment %} <th>HP</th>
     <th>ATK</th>
     <th>DEF</th>
@@ -16,9 +15,9 @@
     </tr>
 {% for pokemon in object_list %}
     <tr>
-    <td>{{pokemon.name}}</td>
+    <td><a href="{% url 'pokedex:pokemon_detail' pokemon.id %}">{{pokemon.name|title }}</a></td>
     <td><img src="{{pokemon.image}}"></td>
-    <td>{{pokemon.type.name}}</td>
+    </tr>
     {% comment %} <td>{{pokemon.hp}}</td>
     <td>{{pokemon.attack}}</td>
     <td>{{pokemon.defense}}</td>

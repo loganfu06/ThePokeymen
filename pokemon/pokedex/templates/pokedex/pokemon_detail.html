@@ -1,16 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
+<br>
 <a href="{% url 'pokedex:pokemon_list' %}">Go back to Pokemon list</a><br/><br/>
-<p>Lmao this is a detail view</p>
-<p>Their name is {{object.name}} </p>
 <a href="{% url 'pokedex:pokemon_delete' object.id %}">Delete Pokemon</a><br/>
 
 <table>
     <tr>
     <th>Name</th>
-    <th>IMG</th>
-    <th>TYPE</th>
+    <th>Image</th>
+    <th>Type</th>
     <th>HP</th>
     <th>ATK</th>
     <th>DEF</th>
@@ -19,9 +18,9 @@
     <th>SPD</th> 
     </tr>
     <tr>
-    <td>{{object.name}}</td>
+    <td>{{object.name|title}}</td>
     <td><img src="{{object.image}}"></td>
-    <td>{{object.type.name}}</td>
+    <td>{% for type in object.type.all %}{{ type.name|title }}<br>{% endfor %}</td>
     <td>{{object.hp}}</td>
     <td>{{object.attack}}</td>
     <td>{{object.defense}}</td>
