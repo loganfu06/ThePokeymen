@@ -75,7 +75,7 @@ def createPokemon(request, pokemon_name):
 
     return redirect("pokedex:pokemon_list")
 
-def loadTypes(request):
+def loadInitialData(request):
     if len(Type.objects.filter()) == 0:
         for i in range(18):
             current_num = i + 1
@@ -97,5 +97,38 @@ def loadTypes(request):
             request, messages.ERROR,
             'Types are already loaded.'
         )
+
+    for i in range(8):
+        current_poke_num = i + 1
+        api_url = 'https://pokeapi.co/api/v2/pokemon/{pnum}'.format(pnum = current_poke_num)
+        response = requests.get(api_url)
+        pokemon_data = response.json()
+        if Pokemon.objects.filter(name=pokemon_data['name']).exists():
+            messages.add_message(
+                request, messages.ERROR,
+            'Pokemon "{pname}" already exists.'.format(pname=pokemon_data['name'].capitalize()))
+        else:
+            current_pokemon = Pokemon(
+                name = pokemon_data['name'],
+                hp = pokemon_data['stats'][0]['base_stat'],
+                attack = pokemon_data['stats'][1]['base_stat'],
+                defense = pokemon_data['stats'][2]['base_stat'],
+                special_attack = pokemon_data['stats'][3]['base_stat'],
+                special_defense = pokemon_data['stats'][4]['base_stat'],
+                speed = pokemon_data['stats'][5]['base_stat'],
+                image = pokemon_data['sprites']['front_default']
+            )
+            current_pokemon.save()
+            for i in pokemon_data['types']:
+                type_name = i['type']['name']
+                try:
+                    current_type = Type.objects.get(name=type_name)
+                except:
+                    messages.add_message(
+                        request, messages.ERROR,
+                    'Please load types before adding Pokemon')
+                    return redirect("pokedex:pokemon_list")
+                current_pokemon.type.add(current_type)
+            current_pokemon.save()
 
     return redirect("pokedex:pokemon_list")
