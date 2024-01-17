@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<br>
+<table>
+    <tr>
+    <th>Type</th>
+    <th>Damage Relations</th>
+    </tr>
+    <tr>
+    <td>{% for type in object.type.all %}{{ type.name|title }}<br>{% endfor %}</td>
+    </tr>
+
+</table>
+{% endblock content %}
+
