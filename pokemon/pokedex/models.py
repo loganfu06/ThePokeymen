@@ -6,7 +6,7 @@ class Type(models.Model):
     damage_relations = models.JSONField(default=list)
 
 class Pokemon(models.Model):
-    name = models.CharField(max_length=25)
+    name = models.CharField(max_length=100)
     hp = models.SmallIntegerField()
     attack = models.SmallIntegerField()
     defense = models.SmallIntegerField()
@@ -23,4 +23,4 @@ class Pokemon(models.Model):
     		return self.name
 
 class PokemonNames(models.Model):
-    name = models.CharField(max_length=25)
+    name = models.CharField(max_length=100)
