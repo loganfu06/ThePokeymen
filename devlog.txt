@@ -7,14 +7,19 @@ Created django project and set up settings for both days
 LoganF -- 2024-01-10 16:53
 Made the models for pokedex, made a basic list view and empty template, and configured some basic settings.
 
+CalvinP -- 2024-01-11 18:40
+Started the html for pokedex, making tables for pokemon name, stats etc. Waiting for models and inserting data to be done to test
+
 LoganF -- 2024-01-11 22:00
 Finished critical views for retrieving pokemon data from api and storing into database, and a view to load all pokemon type data into database.
 The view for getting pokemon may require a filtered results list when entering pokemon to add because the api endpoint is specific.
 
-CalvinP -- 2024-01-11 18:40
-Started the html for pokedex, making tables for pokemon name, stats etc. Waiting for models and inserting data to be done to test
-
 MarcusN -- 2024-01-12 14:39
 Created home app with homepage, created navbar with links to other apps. Starting work on CSS
 
-(new entry here)
+LoganF -- 2024-01-12 14:43
+Created detail and delete views for Pokemon model. Python/backend functionality works, need to work on templates
+
+LoganF -- 2024-01-16 14:47
+Updated README with information for deliverable Wednesday. 
+(start new entry here)
