@@ -23,6 +23,9 @@ Created detail and delete views for Pokemon model. Python/backend functionality 
 CalvinP -- 2024-01-12 17:51
 Finished pokemon list html, used api to display name and image of pokemon, need to work on pokemon detail html.
 
+MarcusN -- 2024-01-16 14:45
+Updated navbar to bootstrap, added bootstrap to pokedex
+
 LoganF -- 2024-01-16 14:47
 Updated README with information for deliverable Wednesday. 
 
@@ -31,6 +34,9 @@ Made a view to load initial data into database. Need to add functionality for in
 
 CalvinP -- 2024-01-16 21:11
 Finished pokemon detail html with all of the stats provided by the api and merged branch with main. 
+
+MarcusN -- 2024-1-17 20:47
+Added bootstrap and css style to list and detail, added logo to navbar
 
 (start new entry here)
 
