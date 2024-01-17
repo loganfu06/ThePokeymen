@@ -22,4 +22,7 @@ Created detail and delete views for Pokemon model. Python/backend functionality 
 
 LoganF -- 2024-01-16 14:47
 Updated README with information for deliverable Wednesday. 
+
+LoganF -- 2024-01-16 20:52
+Made a view to load initial data into database. Need to add functionality for in website to load data through a button, and add data through a option field/button.
 (start new entry here)
