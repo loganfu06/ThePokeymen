@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+<br>
+<select>
+    {% for name_object in pokemon_names %}
+        <option value={{name_object.name}}>{{name_object.name|title}}</option>
+    {% endfor %}
+</select>
+<br>
+<table>
+    <tr>
+    <th>Name</th>
+    <th>Image</th>
+    {% comment %} <th>HP</th>
+    <th>ATK</th>
+    <th>DEF</th>
+    <th>SP_ATK</th>
+    <th>SP_DEF</th>
+    <th>SPD</th> {% endcomment %}
+    </tr>
+{% for pokemon in object_list %}
+    <tr>
+    <td><a href="{% url 'pokedex:pokemon_detail' pokemon.id %}">{{pokemon.name|title }}</a></td>
+    <td><img src="{{pokemon.image}}"></td>
+    </tr>
+    {% comment %} <td>{{pokemon.hp}}</td>
+    <td>{{pokemon.attack}}</td>
+    <td>{{pokemon.defense}}</td>
+    <td>{{pokemon.special_attack}}</td>
+    <td>{{pokemon.attack}}</td>
+    <td>{{pokemon.speed}}</td> {% endcomment %}
+{% endfor %}
+</table>
+{% endblock content %}
+
+{% comment %} class Pokemon(models.Model):
+    name = models.CharField(max_length=25)
+    hp = models.SmallIntegerField()
+    attack = models.SmallIntegerField()
+    defense = models.SmallIntegerField()
+    special_attack = models.SmallIntegerField()
+    special_defense = models.SmallIntegerField()
+    speed = models.SmallIntegerField()
+    image = models.CharField(max_length=250)
+    type = models.ManyToManyField(Type)
+    
+    class Meta:
+        ordering = ['name']
+        
+    def __str__(self):
+    		return self.name {% endcomment %}
