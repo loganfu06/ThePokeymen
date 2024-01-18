@@ -48,5 +48,8 @@ LoganF -- 2024-1-17 18:33
 Touched up/fixed templates a bit, made a model to store all pokemon names the user can retrieve from the API and loaded those names as options in a html select.
 Javascript is necessary to filter the options using a search.
 
+JonathanY -- 2024-01-18 3:31
+Troubleshooted and fixed bugs
+
 (start new entry here)
 
