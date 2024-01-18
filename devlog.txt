@@ -17,20 +17,39 @@ The view for getting pokemon may require a filtered results list when entering p
 MarcusN -- 2024-01-12 14:39
 Created home app with homepage, created navbar with links to other apps. Starting work on CSS
 
+JoathanY -- 2024-01-12 14:40
+Looked into Javascript, but could not do it because no html was made that required it
+
 LoganF -- 2024-01-12 14:43
 Created detail and delete views for Pokemon model. Python/backend functionality works, need to work on templates
 
 CalvinP -- 2024-01-12 17:51
 Finished pokemon list html, used api to display name and image of pokemon, need to work on pokemon detail html.
 
+MarcusN -- 2024-01-16 14:45
+Updated navbar to bootstrap, added bootstrap to pokedex
+
 LoganF -- 2024-01-16 14:47
 Updated README with information for deliverable Wednesday. 
+
+JoathanY -- 2024-01-12 16:40
+Looked more into Javascript and reserched how to implement it
 
 LoganF -- 2024-01-16 20:52
 Made a view to load initial data into database. Need to add functionality for in website to load data through a button, and add data through a option field/button.
 
 CalvinP -- 2024-01-16 21:11
 Finished pokemon detail html with all of the stats provided by the api and merged branch with main. 
+
+MarcusN -- 2024-1-17 14:47
+Added bootstrap and css style to list and detail, added logo to navbar
+
+LoganF -- 2024-1-17 18:33
+Touched up/fixed templates a bit, made a model to store all pokemon names the user can retrieve from the API and loaded those names as options in a html select.
+Javascript is necessary to filter the options using a search.
+
+JonathanY -- 2024-01-18 3:31
+Troubleshooted and fixed bugs
 
 (start new entry here)
 

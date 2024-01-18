@@ -2,10 +2,14 @@
 
 {% block content %}
 <br>
-<div class="row justify-content-center">
-    <div class="col-auto">
-<table class="table table-bordered">
-    <tr class="table-primary">
+<select>
+    {% for name_object in pokemon_names %}
+        <option value={{name_object.name}}>{{name_object.name|title}}</option>
+    {% endfor %}
+</select>
+<br>
+<table>
+    <tr>
     <th>Name</th>
     <th>Image</th>
     {% comment %} <th>HP</th>
