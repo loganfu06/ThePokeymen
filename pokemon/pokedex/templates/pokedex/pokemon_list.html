@@ -2,6 +2,12 @@
 
 {% block content %}
 <br>
+<select>
+    {% for name_object in pokemon_names %}
+        <option value={{name_object.name}}>{{name_object.name|title}}</option>
+    {% endfor %}
+</select>
+<br>
 <table>
     <tr>
     <th>Name</th>

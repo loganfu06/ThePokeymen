@@ -1,3 +1,4 @@
+from typing import Any
 from django.shortcuts import render, redirect
 from django.views.generic import ListView
 from django.views.generic.detail import DetailView
@@ -6,7 +7,7 @@ from django.urls import reverse, reverse_lazy
 from django.contrib import messages
 from django.http import HttpResponse
 
-from .models import Pokemon, Type
+from .models import Pokemon, Type, PokemonNames
 
 import json
 import http.client
@@ -18,6 +19,11 @@ class TypeView(DetailView):
     
 class PokemonListView(ListView):
     model = Pokemon
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['pokemon_names'] = PokemonNames.objects.all()
+        return context
 
 class PokemonDetailView(DetailView):
     model = Pokemon
@@ -133,5 +139,25 @@ def loadInitialData(request):
                     return redirect("pokedex:pokemon_list")
                 current_pokemon.type.add(current_type)
             current_pokemon.save()
+
+    if len(PokemonNames.objects.filter()) == 0:
+        api_url = 'https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0'
+        response = requests.get(api_url)
+        pname_data = response.json()
+        results = pname_data['results']
+        for result in results:
+            current_name = PokemonNames(
+                name = result['name']
+            )
+            current_name.save()
+        messages.add_message(
+            request, messages.SUCCESS,
+            'Pokemon names are loaded.'
+        )
+    else:
+        messages.add_message(
+            request, messages.ERROR,
+            'Pokemon names are already loaded.'
+        )
 
     return redirect("pokedex:pokemon_list")
