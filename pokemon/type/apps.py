@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class BattleConfig(AppConfig):
+class TypeConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'battle'
+    name = 'type'

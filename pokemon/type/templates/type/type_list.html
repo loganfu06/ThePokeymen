@@ -5,11 +5,12 @@
 <table>
     <tr>
     <th>Type</th>
-    <th>Damage Relations</th>
     </tr>
+    {% for type in object_list %}
     <tr>
-    <td>{% for type in object.type.all %}{{ type.name|title }}<br>{% endfor %}</td>
+    <td>{{ type.name|title }}</td>
     </tr>
+    {% endfor %}
 
 </table>
 {% endblock content %}

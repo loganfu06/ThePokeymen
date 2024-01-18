@@ -10,5 +10,4 @@ urlpatterns = [
     path("loadInitialData", views.loadInitialData, name="initial_create"),
     path("getInfo/<int:pk>", views.PokemonDetailView.as_view(), name="pokemon_detail"),
     path("delete/<int:pk>", views.PokemonDeleteView.as_view(), name="pokemon_delete"),
-    path("type/<str:type_name>", views.TypeView.as_view(), name="type_detail")
 ]

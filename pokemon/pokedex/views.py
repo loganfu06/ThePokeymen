@@ -14,9 +14,7 @@ import http.client
 import requests
 
 # Create your views here.
-class TypeView(DetailView):
-    model = Type
-    
+
 class PokemonListView(ListView):
     model = Pokemon
 

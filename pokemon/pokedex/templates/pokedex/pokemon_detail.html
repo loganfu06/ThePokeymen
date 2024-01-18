@@ -20,7 +20,7 @@
     <tr>
     <td>{{object.name|title}}</td>
     <td><img src="{{object.image}}"></td>
-    <td>{% for type in object.type.all %}<a href = "{% url 'pokedex:type_detail' type.name%}">{{ type.name|title }}</a><br>{% endfor %}</td>
+    <td>{% for type in object.type.all %}{{ type.name|title }}<br>{% endfor %}</td>
     <td>{{object.hp}}</td>
     <td>{{object.attack}}</td>
     <td>{{object.defense}}</td>
