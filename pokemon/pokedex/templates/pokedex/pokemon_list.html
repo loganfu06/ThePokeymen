@@ -2,14 +2,21 @@
 
 {% block content %}
 <br>
-<select>
-    {% for name_object in pokemon_names %}
-        <option value={{name_object.name}}>{{name_object.name|title}}</option>
-    {% endfor %}
-</select>
-<br>
-<table>
-    <tr>
+<div class="container">
+    <div class="row">
+        <div class="col">
+        <select class="form-select">
+            {% for name_object in pokemon_names %}
+                <option value={{name_object.name}}>{{name_object.name|title}}</option>
+            {% endfor %}
+        </select>
+        </div>
+        <div class="col"><a href="http://127.0.0.1:8000/pokedex/loadInitialData" class="btn btn-secondary">Load Initial Data</a></div>
+        <br>
+    </div>
+
+<table class="table table-bordered table-striped" style="opacity: 0.9;">
+    <tr class="table-info">
     <th>Name</th>
     <th>Image</th>
     {% comment %} <th>HP</th>
@@ -21,7 +28,7 @@
     </tr>
 {% for pokemon in object_list %}
     <tr> 
-    <td><a href="{% url 'pokedex:pokemon_detail' pokemon.id %}">{{pokemon.name|title }}</a></td>
+    <td><a href="{% url 'pokedex:pokemon_detail' pokemon.id %}" class="btn" data-bs-toggle="tooltip" title="View data?">{{pokemon.name|title }}</a></td>
     <td><img src="{{pokemon.image}}"></td>
     </tr>
     {% comment %} <td>{{pokemon.hp}}</td>

@@ -5,3 +5,9 @@
 .t-header {
     background-color: skyblue;
 }
+
+body {
+    background-image: url("img/background.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
