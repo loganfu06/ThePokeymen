@@ -4,11 +4,11 @@
 <br>
 <div>
     <input type="text" placeholder="Search.." id="myInput" onkeyup="filter()">
-    <div id="showPokemon">
+    <select id="showPokemon">
         {% for name_object in pokemon_names %}
-            <option class="pokelist" value={{name_object.name}}>{{name_object.name|title}}</option>
+            <option class="pokelist" id="{{name_object.name}}"value={{name_object.name}}>{{name_object.name|title}}</option>
         {% endfor %}
-    </div>
+    </select>
 </div>
 <br>
 <table>
