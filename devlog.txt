@@ -51,5 +51,7 @@ Javascript is necessary to filter the options using a search.
 JonathanY -- 2024-01-18 3:31
 Troubleshooted and fixed bugs
 
+JonathanY -- 2024-01-19 2:48
+Added js and removed unessary html
 (start new entry here)
 
