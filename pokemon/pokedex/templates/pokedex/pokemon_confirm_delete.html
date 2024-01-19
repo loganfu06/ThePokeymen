@@ -1,10 +1,13 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div class="container">
 <form method="post">{% csrf_token %}
-    <p>Are you sure you want to delete the Pokemon "{{ object.name|title }}"?</p>
+    <br><br>
+    <h5 class="display-6"><strong>Are you sure you want to delete the Pokemon "{{ object.name|title }}"?</strong></h5>
     {{ form.as_p }}
-    <input type="submit" value="Confirm">
-    <a href="{% url 'pokedex:pokemon_detail' object.id %}">Go back</a><br/>
+    <input type="submit" value="Confirm" class="btn btn-primary">
+    <a href="{% url 'pokedex:pokemon_detail' object.id %}" class="btn btn-danger">Go back</a><br/>
 </form>
+</div>
 {% endblock content %}
