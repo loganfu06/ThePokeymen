@@ -14,6 +14,7 @@ import http.client
 import requests
 
 # Create your views here.
+
 class PokemonListView(ListView):
     model = Pokemon
 
@@ -24,7 +25,7 @@ class PokemonListView(ListView):
 
 class PokemonDetailView(DetailView):
     model = Pokemon
-    
+
 class PokemonDeleteView(DeleteView):
     model = Pokemon
     success_url = reverse_lazy("pokedex:pokemon_list")

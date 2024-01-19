@@ -2,17 +2,24 @@
 
 {% block content %}
 <br>
-<div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+        <div>
     <input type="text" placeholder="Search.." id="myInput" onkeyup="filter()">
-    <select id="showPokemon">
-        {% for name_object in pokemon_names %}
-            <option class="pokelist" id="{{name_object.name}}"value={{name_object.name}}>{{name_object.name|title}}</option>
-        {% endfor %}
-    </select>
+    <select class="form-select" id="showPokemon">
+                {% for name_object in pokemon_names %}
+                    <option class="pokelist" id="{{name_object.name}}"value={{name_object.name}}>{{name_object.name|title}}</option>
+                {% endfor %}
+            </select>
 </div>
-<br>
-<table>
-    <tr>
+        </div>
+        <div class="col"><a href="http://127.0.0.1:8000/pokedex/loadInitialData" class="btn btn-secondary">Load Initial Data</a></div>
+        <br>
+    </div>
+
+<table class="table table-bordered table-striped" style="opacity: 0.9;">
+    <tr class="table-info">
     <th>Name</th>
     <th>Image</th>
     {% comment %} <th>HP</th>
@@ -23,8 +30,8 @@
     <th>SPD</th> {% endcomment %}
     </tr>
 {% for pokemon in object_list %}
-    <tr>
-    <td><a href="{% url 'pokedex:pokemon_detail' pokemon.id %}">{{pokemon.name|title }}</a></td>
+    <tr> 
+    <td><a href="{% url 'pokedex:pokemon_detail' pokemon.id %}" class="btn" data-bs-toggle="tooltip" title="View data?">{{pokemon.name|title }}</a></td>
     <td><img src="{{pokemon.image}}"></td>
     </tr>
     {% comment %} <td>{{pokemon.hp}}</td>
@@ -35,6 +42,8 @@
     <td>{{pokemon.speed}}</td> {% endcomment %}
 {% endfor %}
 </table>
+</div>
+</div>
 {% endblock content %}
 
 {% comment %} class Pokemon(models.Model):
