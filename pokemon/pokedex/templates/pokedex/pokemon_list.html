@@ -2,11 +2,14 @@
 
 {% block content %}
 <br>
-<select>
-    {% for name_object in pokemon_names %}
-        <option value={{name_object.name}}>{{name_object.name|title}}</option>
-    {% endfor %}
-</select>
+<div>
+    <input type="text" placeholder="Search.." id="myInput" onkeyup="filter()">
+    <div class="showPokemon hidden">
+        {% for name_object in pokemon_names %}
+            <option class=pokelist value={{name_object.name}}>{{name_object.name|title}}</option>
+        {% endfor %}
+    </div>
+</div>
 <br>
 <table>
     <tr>
