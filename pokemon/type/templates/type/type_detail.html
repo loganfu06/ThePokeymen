@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<br>
+<a href="{% url 'type:type_list' %}">Go back to Type list</a><br/><br/>
+
+<table class="table table-bordered">
+    <tr class="table-info">
+    <th>Type</th>
+    <th>Damage Relations</th>
+    </tr>
+
+    <tr>
+        <td>{{ type.name|title }}</td>
+        
+        {% for item in type.items %}
+        <td>{{ type }}: {{ name }}</td>
+        {% endfor %}
+
+
+    </tr>
+</table>
+{% endblock content %}

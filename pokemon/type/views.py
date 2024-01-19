@@ -18,3 +18,4 @@ class TypeListView(ListView):
     template_name = "type/type_list.html"
 class TypeDetailView(DetailView):
     model = Type
+    template_name = "type/type_detail.html"

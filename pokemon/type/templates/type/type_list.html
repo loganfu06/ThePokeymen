@@ -8,7 +8,7 @@
     </tr>
     {% for type in object_list %}
     <tr>
-    <td>{{ type.name|title }}</td>
+    <td><a href = "{% url 'type:type_detail' type.id %}">{{ type.name|title }}</td>
     </tr>
     {% endfor %}
 
