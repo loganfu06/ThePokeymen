@@ -12,16 +12,15 @@ if (!filter) {
     }
 }
 function filter() {
-    var keyword = document.getElementById("myInput").value;
+    let KEYWORD = document.getElementById("myInput").value;
 
-    var pokelist = document.getElementById("showPokemon");
-    for (var i = 0; i < pokelist.length; i++) {
-        var txt = pokelist.options[i].text;
-        if (!txt.toUpperCase().match(keyword.toUpperCase())) {
-            $(pokelist.options[i]).attr('disabled', 'disabled').hide();
+    //let pokelist = document.getElementById("showPokemon");
+    for (let i = 0; i < SHOWPOKEMON.length; i++) {
+        let txt = SHOWPOKEMON.options[i].text;
+        if (!txt.toUpperCase().slice(0, KEYWORD.length).match(KEYWORD.toUpperCase())) {
+            $(SHOWPOKEMON.options[i]).attr('disabled', 'disabled').hide();
         } else {
-            $(pokelist.options[i]).removeAttr('disabled').show();
+            $(SHOWPOKEMON.options[i]).removeAttr('disabled').show();
         }
-
     }
 }
