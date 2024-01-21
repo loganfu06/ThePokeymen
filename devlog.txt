@@ -60,5 +60,8 @@ Got javascript to fully filter out unnessary search queries. (ex. putting c in t
 LoganF -- 2024-01-21 15:02
 Finished type list and type detail. Json data is now displayed in template. Needs to look better.
 
+LoganF -- 2024-01-21 16:34
+Created/finished a basic battle pokemon view and respective templates. Need to do finishing touches.
+
 (start new entry here)
 
