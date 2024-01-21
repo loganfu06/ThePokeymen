@@ -26,14 +26,14 @@ Created detail and delete views for Pokemon model. Python/backend functionality 
 CalvinP -- 2024-01-12 17:51
 Finished pokemon list html, used api to display name and image of pokemon, need to work on pokemon detail html.
 
+JonathanY -- 2024-01-16 14:44
+Troubleshooted and fixed bugs, as well as reserch javascript and how to implement it
+
 MarcusN -- 2024-01-16 14:45
 Updated navbar to bootstrap, added bootstrap to pokedex
 
 LoganF -- 2024-01-16 14:47
 Updated README with information for deliverable Wednesday. 
-
-JoathanY -- 2024-01-12 16:40
-Looked more into Javascript and reserched how to implement it
 
 LoganF -- 2024-01-16 20:52
 Made a view to load initial data into database. Need to add functionality for in website to load data through a button, and add data through a option field/button.
@@ -48,10 +48,14 @@ LoganF -- 2024-1-17 18:33
 Touched up/fixed templates a bit, made a model to store all pokemon names the user can retrieve from the API and loaded those names as options in a html select.
 Javascript is necessary to filter the options using a search.
 
-JonathanY -- 2024-01-18 3:31
-Troubleshooted and fixed bugs
-
-JonathanY -- 2024-01-19 2:48
+JonathanY -- 2024-01-18 2:48
 Added js and removed unessary html
+
+JonathanY -- 2024-01-19 14:45
+Got Javascript to filter out unnessary search queries. Need to make sure it works for only the front of a string (ex. putting c in the search bar sould return cat but not search)
+
+JonathanY -- 2024-01-21 2:38
+Got javascript to fully filter out unnessary search queries. (ex. putting c in the search bar will return cat but not return search)
+
 (start new entry here)
 
