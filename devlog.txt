@@ -57,5 +57,8 @@ Got Javascript to filter out unnessary search queries. Need to make sure it work
 JonathanY -- 2024-01-21 2:38
 Got javascript to fully filter out unnessary search queries. (ex. putting c in the search bar will return cat but not return search)
 
+LoganF -- 2024-01-21 15:02
+Finished type list and type detail. Json data is now displayed in template. Needs to look better.
+
 (start new entry here)
 
