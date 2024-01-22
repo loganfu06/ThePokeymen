@@ -1,20 +1,23 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
+<div class="container" style="opacity:0.9;">
 <title>{{p1_name}} vs. {{p2_name}}</title>
 <br>
-<a href="{% url 'type:type_list' %}">Go back to Type list</a><br/><br/>
-<h1><img src="{{p1_image}}"><b> {{p1_name}} vs. {{p2_name}} </b> <img src="{{p2_image}}"> </h1>
-<h2>{{p1_name}}'s types against {{p2_name}}</h2>
-<p>
+<a class="btn btn-secondary" href="{% url 'type:type_list' %}">Go back to Type list</a><br/><br/>
+<h1 class="text-center bg-danger border rounded"><img src="{{p1_image}}"><b> {{p1_name}} vs. {{p2_name}} </b> <img src="{{p2_image}}"> </h1>
+<h2 class="text-center bg-light border rounded">{{p1_name}}'s types against {{p2_name}}</h2>
+<p class="container bg-light rounded border">
     {% for type, info in type_context.p1types.items %}
         <img src="/static/{{type}}.png"> {{info}} <img src="{{p2_image}}"> <br>
     {% endfor %}
 </p>
-<h2>{{p2_name}}'s types against {{p1_name}}</h2>
-<p>
+<h2 class="text-center bg-light border rounded">{{p2_name}}'s types against {{p1_name}}</h2>
+<p class="container bg-light rounded border">
     {% for type, info in type_context.p2types.items %}
         <img src="/static/{{type}}.png"> {{info}} <img src="{{p1_image}}"> <br>
-    {% endfor %}
+    
+        {% endfor %}
 </p>
+<div>
 {% endblock content %}

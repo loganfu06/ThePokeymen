@@ -9,24 +9,24 @@
    <link rel="stylesheet" href="{% static 'main.css'%}">
    <!-- Latest compiled and minified CSS -->
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-   <div class="title container my-5 p-1 bg-primary"><h1>Welcome to {{title_page}}</h1></div><br><br>
+   <div class="title container my-5 p-3 bg-primary rounded border" style="opacity: 0.9"><img src="{% static 'img/welcome.png' %}"></div><br><br>
 
-   <div class="explainer container">
+   <div class="explainer container bg-light rounded border" style="opacity: 0.9">
       <h3>Home</h3>
       <p>
          The landing page for our website. Contains links to other
          apps and a brief overview of them.
       </p>
    </div><br>
-   <div class="explainer container ">
+   <div class="explainer container bg-light rounded border" style="opacity: 0.9"> 
       <h3>Pokedex</h3>
       <p>
-         The main page of our website. Here you can add Pokemon entries to the database
-         through the PokeApi. Enter a Pokemon name into the search field, and choose from the
-         list of Pokemon. You can also view the data of all existing Pokemon in the database.
+         The main page of our website. Here you can interact with the
+         database and create, edit, or view pokemon and their data. 
+         Click on a pokemon's name to learn more about them.
       </p>
-   </div>
-   <div class="explainer container ">
+   </div><br>
+   <div class="border explainer container bg-light rounded" style="opacity: 0.9"> 
       <h3>Type</h3>
       <p>
          The type app lists all the Pokemon types, and each type has information about their

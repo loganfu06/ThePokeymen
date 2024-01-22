@@ -2,37 +2,43 @@
 {% load static %}
 
 {% block content %}
+<div class="container">
 <title>Type</title>
 <br>
 Pokemon 1:
-<select id="pokemon1">
+<div class="col-6">
+<select class="form-select" id="pokemon1">
     {% for pokemon in current_pokemon %}
         <option value={{pokemon.id}}>{{pokemon.name|title}}</option>
     {% endfor %}
 </select>
+</div>
 <br>
 Pokemon 2:
-<select id="pokemon2">
+<div class="col-6">
+<select class="form-select" id="pokemon2">
     {% for pokemon in current_pokemon %}
         <option value={{pokemon.id}}>{{pokemon.name|title}}</option>
     {% endfor %}
 </select>
+</div>
 <button class="col btn btn-secondary" id="battlePokemon">Battle Pokemon</button>
 
 <br>
 <br>
-<table>
-    <tr>
+<table class="table table-bordered table-striped" style="opacity: 0.9;"> 
+    <tr class="table-info">
     <th>Type</th>
     <th>Image</th>
     </tr>
     {% for type in object_list %}
     <tr>
-    <td><a href="{% url 'type:type_detail' type.id %}">{{ type.name|title }}</a></td>
+    <td><a class="btn btn-link" data-bs-toggle="tooltip" title="View data?" href="{% url 'type:type_detail' type.id %}">{{ type.name|title }}</a></td>
     <td> <img src="/static/{{type.name}}.png"></td>
     </tr>
     {% endfor %}
 
 </table>
+</div>
 {% endblock content %}
 

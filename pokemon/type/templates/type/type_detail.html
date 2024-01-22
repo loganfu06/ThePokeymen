@@ -1,21 +1,22 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div class="container">
 <title>{{object.name|title}}</title>
 <br>
-<a href="{% url 'type:type_list' %}">Go back to Type list</a><br/><br/>
+<a class="btn btn-secondary" href="{% url 'type:type_list' %}">Go back to Type list</a><br/><br/>
 
-<h1><img src="/static/{{object.name}}.png"> {{object.name | title}} Type Information <img src="/static/{{object.name}}.png"> </h1> <br>
-<table>
+<h1 class="text-center"><img src="/static/{{object.name}}.png"> {{object.name | title}} Type Information <img src="/static/{{object.name}}.png"> </h1> <br>
+<table class="table table-image table-bordered table-striped" style="opacity:0.9;">
     <tr>
-        <th><h2>Advantages</h2></th>
-        <th><h2>Disadvantages</h2></th>
+        <th class="table-success"><h2>Advantages</h2></th>
+        <th class="table-danger"><h2>Disadvantages</h2></th>
     </tr>
     <tr>
         <td> 
             <h5>Double damage to: </h5>
                 {% for i in object.damage_relations.double_damage_to %}
-                    {{i.name | title }} <img src="/static/{{i.name}}.png" width="20%"> <br>
+                    {{i.name | title }} <img src="/static/{{i.name}}.png" style="max-width:20%;"> <br>
                     {% empty %}
                     None
                 {% endfor %}
@@ -23,7 +24,7 @@
         <td> 
             <h5>Double damage from: </h5>
                 {% for i in object.damage_relations.double_damage_from %}
-                    {{i.name | title }} <img src="/static/{{i.name}}.png" width="20%"> <br>
+                    {{i.name | title }} <img class="img-fluid" src="/static/{{i.name}}.png" style="max-width:20%;"> <br>
                     {% empty %}
                     None
                 {% endfor %}
@@ -33,7 +34,7 @@
         <td> 
             <h5>Half damage from: </h5>
                 {% for i in object.damage_relations.half_damage_from %}
-                    {{i.name | title }} <img src="/static/{{i.name}}.png" width="20%"> <br>
+                    {{i.name | title }} <img src="/static/{{i.name}}.png" style="max-width:20%;"> <br>
                     {% empty %}
                     None
                 {% endfor %}
@@ -41,7 +42,7 @@
         <td> 
             <h5>Half damage to: </h5>
                 {% for i in object.damage_relations.half_damage_to %}
-                    {{i.name | title }} <img src="/static/{{i.name}}.png" width="20%"> <br>
+                    {{i.name | title }} <img src="/static/{{i.name}}.png" style="max-width:20%;"> <br>
                     {% empty %}
                     None
                 {% endfor %}
@@ -51,7 +52,7 @@
         <td> 
             <h5>No damage from: </h5>
             {% for i in object.damage_relations.no_damage_from %}
-                {{i.name | title }} <img src="/static/{{i.name}}.png" width="20%"> <br>
+                {{i.name | title }} <img src="/static/{{i.name}}.png" style="max-width:20%;"> <br>
                 {% empty %}
                 None
             {% endfor %}
@@ -59,7 +60,7 @@
         <td> 
             <h5>No damage to: </h5>
             {% for i in object.damage_relations.no_damage_to %}
-                {{i.name | title }} <img src="/static/{{i.name}}.png" width="20%"> <br>
+                {{i.name | title }} <img src="/static/{{i.name}}.png" style="max-width:20%;"> <br>
                 {% empty %}
                 None
             {% endfor %}
@@ -67,5 +68,6 @@
         </td>
     </tr>
 </table>
+<div>
 
 {% endblock content %}

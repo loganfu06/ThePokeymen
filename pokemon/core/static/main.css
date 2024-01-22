@@ -12,6 +12,11 @@ body {
     background-attachment: fixed;
 }
 
+td a { 
+    display: block; 
+    border: 1px solid black;
+    padding: 16px; 
+ }
 
 .hidden{
     display: none;
