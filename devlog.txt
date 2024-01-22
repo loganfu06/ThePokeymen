@@ -72,5 +72,8 @@ Created/finished a basic battle pokemon view and respective templates. Need to d
 CalvinP -- 2024-01-22 14:31
 Updated final design document
 
+JonathanY -- 2024-01-22 14:44
+Got javascript to add to pokedex and see battle screen of 2 pokemon. 
+
 (start new entry here)
 
