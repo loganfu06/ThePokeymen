@@ -2,6 +2,7 @@
 
 {% block content %}
 <div class="container">
+<title>{{object.name|title}}</title>
 <br>
 <a href="{% url 'pokedex:pokemon_list' %}" class="btn btn-primary">Go back to Pokemon list</a><br/><br/>
 <a href="{% url 'pokedex:pokemon_delete' object.id %}" class="btn btn-danger">Delete Pokemon</a><br/><br/>
@@ -21,7 +22,7 @@
     <tr>
     <td>{{object.name|title}}</td>
     <td><img src="{{object.image}}"></td>
-    <td>{% for type in object.type.all %}{{ type.name|title }}<br>{% endfor %}</td>
+    <td>{% for type in object.type.all %}<a href="{% url 'type:type_detail' type.id %}">{{ type.name|title }}</a><br>{% endfor %}</td>
     <td>{{object.hp}}</td>
     <td>{{object.attack}}</td>
     <td>{{object.defense}}</td>

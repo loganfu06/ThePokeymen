@@ -105,7 +105,7 @@ def loadInitialData(request):
             'Types are already loaded.'
         )
 
-    for i in range(8):
+    for i in range(9):
         current_poke_num = i + 1
         api_url = 'https://pokeapi.co/api/v2/pokemon/{pnum}'.format(pnum = current_poke_num)
         response = requests.get(api_url)

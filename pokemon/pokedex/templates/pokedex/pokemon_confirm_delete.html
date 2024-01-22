@@ -2,6 +2,7 @@
 
 {% block content %}
 <div class="container">
+<title>Confirm Delete</title>
 <form method="post">{% csrf_token %}
     <br><br>
     <h5 class="display-6"><strong>Are you sure you want to delete the Pokemon "{{ object.name|title }}"?</strong></h5>

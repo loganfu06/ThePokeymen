@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block content %}
+<title>{{object.name|title}}</title>
+<br>
+<a href="{% url 'type:type_list' %}">Go back to Type list</a><br/><br/>
+
+<h1><img src="/static/{{object.name}}.png"> {{object.name | title}} Type Information <img src="/static/{{object.name}}.png"> </h1> <br>
+<table>
+    <tr>
+        <th><h2>Advantages</h2></th>
+        <th><h2>Disadvantages</h2></th>
+    </tr>
+    <tr>
+        <td> 
+            <h5>Double damage to: </h5>
+                {% for i in object.damage_relations.double_damage_to %}
+                    {{i.name | title }} <img src="/static/{{i.name}}.png" width="20%"> <br>
+                    {% empty %}
+                    None
+                {% endfor %}
+        </td>
+        <td> 
+            <h5>Double damage from: </h5>
+                {% for i in object.damage_relations.double_damage_from %}
+                    {{i.name | title }} <img src="/static/{{i.name}}.png" width="20%"> <br>
+                    {% empty %}
+                    None
+                {% endfor %}
+        </td>
+    </tr>
+    <tr>
+        <td> 
+            <h5>Half damage from: </h5>
+                {% for i in object.damage_relations.half_damage_from %}
+                    {{i.name | title }} <img src="/static/{{i.name}}.png" width="20%"> <br>
+                    {% empty %}
+                    None
+                {% endfor %}
+        </td>
+        <td> 
+            <h5>Half damage to: </h5>
+                {% for i in object.damage_relations.half_damage_to %}
+                    {{i.name | title }} <img src="/static/{{i.name}}.png" width="20%"> <br>
+                    {% empty %}
+                    None
+                {% endfor %}
+        </td>
+    </tr>
+    <tr>
+        <td> 
+            <h5>No damage from: </h5>
+            {% for i in object.damage_relations.no_damage_from %}
+                {{i.name | title }} <img src="/static/{{i.name}}.png" width="20%"> <br>
+                {% empty %}
+                None
+            {% endfor %}
+        </td>
+        <td> 
+            <h5>No damage to: </h5>
+            {% for i in object.damage_relations.no_damage_to %}
+                {{i.name | title }} <img src="/static/{{i.name}}.png" width="20%"> <br>
+                {% empty %}
+                None
+            {% endfor %}
+
+        </td>
+    </tr>
+</table>
+
+{% endblock content %}

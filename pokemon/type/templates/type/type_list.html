@@ -1,14 +1,33 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
+<title>Type</title>
+<br>
+Pokemon 1:
+<select>
+    {% for pokemon in current_pokemon %}
+        <option value={{pokemon.id}}>{{pokemon.name|title}}</option>
+    {% endfor %}
+</select>
+<br>
+Pokemon 2:
+<select>
+    {% for pokemon in current_pokemon %}
+        <option value={{pokemon.id}}>{{pokemon.name|title}}</option>
+    {% endfor %}
+</select>
+<br>
 <br>
 <table>
     <tr>
     <th>Type</th>
+    <th>Image</th>
     </tr>
     {% for type in object_list %}
     <tr>
-    <td>{{ type.name|title }}</td>
+    <td><a href="{% url 'type:type_detail' type.id %}">{{ type.name|title }}</a></td>
+    <td> <img src="/static/{{type.name}}.png"></td>
     </tr>
     {% endfor %}
 
