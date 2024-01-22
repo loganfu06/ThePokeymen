@@ -12,7 +12,7 @@ ADDTOPOKEDEX.addEventListener('click', function () {
     // let name = document.querySelector(POKEMONCHOSEN).id;
     let POKEMONID = document.querySelector("." + POKEMONCHOSEN).id
     POKEMONID = POKEMONID.match(/\d+/g);
-    location.href=`http://127.0.0.1:8000/pokedex/getInfo/${POKEMONID}`
+    location.href=`http://127.0.0.1:8000/pokedex/create/${POKEMONID}`
 })
 
 if (!filter) {
