@@ -51,11 +51,17 @@ Javascript is necessary to filter the options using a search.
 JonathanY -- 2024-01-18 2:48
 Added js and removed unessary html
 
+MarcusN -- 2024-01-18 14:49
+Added background, fixed dropdown
+
 CalvinP -- 2024-01-18 14:40
 Created type app and created the models and views for type and type detail
 
 JonathanY -- 2024-01-19 14:45
 Got Javascript to filter out unnessary search queries. Need to make sure it works for only the front of a string (ex. putting c in the search bar sould return cat but not search)
+
+MarcusN -- 2024-01-19 14:47
+Finished Bootstrap and CSS for pokedex confirm_delete and detail, updated homepage with new app
 
 CalvinP -- 2024-01-18 14:49
 Finished the html for type list, which now displays all the types. Need to work on damage relations in type detail
@@ -74,6 +80,9 @@ Updated final design document
 
 JonathanY -- 2024-01-22 14:44
 Got javascript to add to pokedex and see battle screen of 2 pokemon. 
+
+MarcusN --  2024-01-22 14:53
+Created bootstrap for type list, type detail, and battle, added finishing touches for buttons, etc.
 
 (start new entry here)
 
