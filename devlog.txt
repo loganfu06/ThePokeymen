@@ -69,5 +69,8 @@ Finished type list and type detail. Json data is now displayed in template. Need
 LoganF -- 2024-01-21 16:34
 Created/finished a basic battle pokemon view and respective templates. Need to do finishing touches.
 
+CalvinP -- 2024-01-22 14:31
+Updated final design document
+
 (start new entry here)
 
