@@ -7,16 +7,19 @@
     <div class="row">
         <div class="col">
             <div>
-                <input type="text" placeholder="Search.." id="myInput" onkeyup="filter()">
+                <input class="form-control" type="text" placeholder="Search.." id="myInput" onkeyup="filter()"><br>
                 <select class="form-select" id="showPokemon">
                     {% for name_object in pokemon_names %}
                     <option class="pokelist {{name_object.name}}" id="{{name_object.name}} {{name_object.id}}"value={{name_object.name}}>{{name_object.name|title}}</option>
                     {% endfor %}
                 </select>
-                <button class="col btn btn-secondary" id="addToPokedex">Add to Pokedex</a></button>
+                <div class="col">
+                    <button class="col btn btn-secondary" id="addToPokedex">Add to Pokedex</a></button>
+                    <a href="http://127.0.0.1:8000/pokedex/loadInitialData" class="btn btn-secondary">Load Initial Data</a>
+                    
+                </div>
             </div>
         </div>
-        <div class="col"><a href="http://127.0.0.1:8000/pokedex/loadInitialData" class="btn btn-secondary">Load Initial Data</a></div>
         <br>
     </div>
 
