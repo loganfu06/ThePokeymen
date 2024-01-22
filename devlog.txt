@@ -51,8 +51,14 @@ Javascript is necessary to filter the options using a search.
 JonathanY -- 2024-01-18 2:48
 Added js and removed unessary html
 
+CalvinP -- 2024-01-18 14:40
+Created type app and created the models and views for type and type detail
+
 JonathanY -- 2024-01-19 14:45
 Got Javascript to filter out unnessary search queries. Need to make sure it works for only the front of a string (ex. putting c in the search bar sould return cat but not search)
+
+CalvinP -- 2024-01-18 14:49
+Finished the html for type list, which now displays all the types. Need to work on damage relations in type detail
 
 JonathanY -- 2024-01-21 2:38
 Got javascript to fully filter out unnessary search queries. (ex. putting c in the search bar will return cat but not return search)
