@@ -33,7 +33,7 @@
     </tr>
 {% for pokemon in object_list %}
     <tr> 
-    <td><a href="{% url 'pokedex:pokemon_detail' pokemon.id %}" class="btn" data-bs-toggle="tooltip" title="View data?">{{pokemon.name|title }}</a></td>
+    <td><a href="{% url 'pokedex:pokemon_detail' pokemon.id %}" class="btn btn-link" data-bs-toggle="tooltip" title="View data?">{{pokemon.name|title }}</a></td>
     <td><img src="{{pokemon.image}}"></td>
     </tr>
     {% comment %} <td>{{pokemon.hp}}</td>
