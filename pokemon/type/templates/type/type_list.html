@@ -7,7 +7,7 @@
 <br>
 Pokemon 1:
 <div class="col-6">
-<select class="form-select">
+<select class="form-select" id="pokemon1">
     {% for pokemon in current_pokemon %}
         <option value={{pokemon.id}}>{{pokemon.name|title}}</option>
     {% endfor %}
@@ -16,12 +16,14 @@ Pokemon 1:
 <br>
 Pokemon 2:
 <div class="col-6">
-<select class="form-select">
+<select class="form-select" id="pokemon2">
     {% for pokemon in current_pokemon %}
         <option value={{pokemon.id}}>{{pokemon.name|title}}</option>
     {% endfor %}
 </select>
 </div>
+<button class="col btn btn-secondary" id="battlePokemon">Battle Pokemon</button>
+
 <br>
 <br>
 <table class="table table-bordered table-striped" style="opacity: 0.9;"> 
