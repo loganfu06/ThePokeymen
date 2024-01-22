@@ -5,18 +5,20 @@
 <title>Type</title>
 <br>
 Pokemon 1:
-<select>
+<select id="pokemon1">
     {% for pokemon in current_pokemon %}
         <option value={{pokemon.id}}>{{pokemon.name|title}}</option>
     {% endfor %}
 </select>
 <br>
 Pokemon 2:
-<select>
+<select id="pokemon2">
     {% for pokemon in current_pokemon %}
         <option value={{pokemon.id}}>{{pokemon.name|title}}</option>
     {% endfor %}
 </select>
+<button class="col btn btn-secondary" id="battlePokemon">Battle Pokemon</button>
+
 <br>
 <br>
 <table>
