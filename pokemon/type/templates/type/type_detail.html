@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+<title>{{object.name|title}}</title>
 <br>
 <a href="{% url 'type:type_list' %}">Go back to Type list</a><br/><br/>
 

@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+<title>Confirm Delete</title>
 <form method="post">{% csrf_token %}
     <p>Are you sure you want to delete the Pokemon "{{ object.name|title }}"?</p>
     {{ form.as_p }}
